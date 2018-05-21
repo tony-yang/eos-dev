@@ -18,10 +18,17 @@ The demo-kernel directory contains a hello world kernel I used to test the envir
 - Added additional packages. All packages installed are documented in the Dockerfile
 - Run qemu in curses mode (No graphical support inside a docker container)
 ```
-qemu-system-i386 -curses -cdrom eos.iso
+docker exec -it <CONTAINER NAME> bash
+git clone https://github.com/tony-yang/eos-dev.git
+cd eos-dev/demo-kernel
+make clean
+make
+qemu-system-i386 -curses -cdrom bin/eos.iso
 ```
 
 ## References
 Download the GRUB source code: ftp://ftp.gnu.org/gnu/grub/grub-2.02.tar.gz
 
 OS Dev Guide: https://wiki.osdev.org/Bare_Bones
+
+Forum discussion on QEMU using BIOS boot when host uses EFI boot, and the solution to `Boot failed: Could not read from CDROM (code 0009)`: https://forum.osdev.org/viewtopic.php?f=1&t=28894
