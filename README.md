@@ -12,6 +12,15 @@ docker exec -it <CONTAINER NAME> bash
 git clone <OS repository>
 ```
 
+## A Hello World Demo Kernel
+The demo-kernel directory contains a hello world kernel I used to test the environment setup. The demo follows the Bare Bones tutorial from the osdev.org. I added a few steps not in the tutorial in order to run the demo kernel. All changes are documented here or are automated as part of the environment setup.
+
+- Added additional packages. All packages installed are documented in the Dockerfile
+- Run qemu in curses mode (No graphical support inside a docker container)
+```
+qemu-system-i386 -curses -cdrom eos.iso
+```
+
 ## References
 Download the GRUB source code: ftp://ftp.gnu.org/gnu/grub/grub-2.02.tar.gz
 

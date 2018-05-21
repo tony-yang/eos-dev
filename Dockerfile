@@ -6,8 +6,12 @@ FROM eos-xcompiler
 RUN apt-get update && apt-get install -y \
     gettext \
     git \
+    grub-pc-bin \
+    libfreetype6-dev \
+    mtools \
     qemu \
     qemu-system-x86 \
+    ttf-unifont \
     vim \
     xorriso \
  && rm -rf /var/lib/apt/lists/*
