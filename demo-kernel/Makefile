@@ -31,7 +31,7 @@ eos.iso: eos.bin verify
 	cp $(OBJS_DIR)/eos.bin $(ISO_DIR_BOOT)
 	grub-mkrescue -d /usr/lib/grub/i386-pc -o $(OBJS_DIR)/$@ $(ISO_DIR)
 
-iso-output: eos.iso:
+iso-output: eos.iso
 	cp $(OBJS_DIR)/$< $(ISO_OUTPUT)
 
 $(OBJS_DIR):
