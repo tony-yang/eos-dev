@@ -41,4 +41,4 @@ RUN mkdir -p ${SRC} \
  && cd ${SRC} \
  && rm -rf grub-2.02.tar.gz grub-2.02
 
-CMD ["bash"]
+CMD ["/bin/bash"]

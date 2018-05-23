@@ -7,7 +7,7 @@ This is an experimental OS development environment. Currently, it includes the i
 After starting a new container, clone a OS repository and start developing.
 ```
 docker build -t eos-dev .
-docker run -itd --rm -v <HOST VOLUME>:/root/eos-output eos-dev
+docker run -itd --rm --volume=<HOST VOLUME>:/root/eos-output eos-dev
 docker exec -it <CONTAINER NAME> bash
 git clone <OS repository>
 ```
